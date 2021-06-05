@@ -2168,7 +2168,12 @@ local professions_table = {
 };
 
 function DATA:getData(item_name,profession)
-	local d=professions_table[profession][item_name]
+    --print("getData("..item_name..","..profession..") called")
+	local recipe_table=professions_table[profession]
+	if(recipe_table==nil) then
+		return nil
+	end
+	local d=recipe_table[item_name]
 	--if(d==nil) then
 	--	print("WARNING: returning nil item: "..profession.."|"..item_name)
 	--end

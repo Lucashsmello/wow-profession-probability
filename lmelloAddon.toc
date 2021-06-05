@@ -1,5 +1,6 @@
 ## Interface: 20501
 ## Title: Lucas super addon TBC
 ## Notes: My first AddOn for TBC
+## LoadWith: Blizzard_TradeskillUI
 professions_data_tbc.lua
 lmelloAddon.lua
