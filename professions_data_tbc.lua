@@ -1,3 +1,7 @@
+local _, core = ...;
+core.DATA = {};
+
+local DATA = core.DATA;
 
 local alchemy = {
 	["Minor Healing Potion"] = {b=55, e=95},
@@ -2162,3 +2166,11 @@ local professions_table = {
 	["Mining"] = mining,
 	["Jewelcrafting"] = jewelcrafting
 };
+
+function DATA:getData(item_name,profession)
+	local d=professions_table[profession][item_name]
+	--if(d==nil) then
+	--	print("WARNING: returning nil item: "..profession.."|"..item_name)
+	--end
+	return d;
+end
